@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Dog</title>
+</head>
+
+<body>
+<image id="dog"></image>
+<script type="text/javascript">
+    var imgElement = document.getElementById("dog");
+    fetch('https://dog.ceo/api/breeds/image/random')
+        .then(response => response.json())
+        .then(data => imgElement.src = data.message);
+</script>
+</body>
+
+</html>
